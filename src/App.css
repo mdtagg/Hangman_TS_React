@@ -15,11 +15,13 @@ body {
 
 .gallows-container {
     height:50%;
-    border:1px solid black;
+    display:flex;
+    justify-content: center;
 }
 
 .word-container {
     height:20%;
+    border:1px solid black;
 }
 
 .keyboard-container {
