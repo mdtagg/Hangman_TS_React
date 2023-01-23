@@ -6,6 +6,15 @@ body {
     margin:0;
 }
 
+.end-message {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+    margin-top:10px;
+    visibility:hidden;
+}
+
 .hangman-container {
     height:100vh;
     width:100vw;
