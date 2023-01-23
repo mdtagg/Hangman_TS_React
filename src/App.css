@@ -21,7 +21,23 @@ body {
 
 .word-container {
     height:20%;
-    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding:15px;
+    font-size: 3rem;
+    gap:10px;
+}
+
+.underline {
+    border-bottom:.5rem solid black;
+}
+
+.letter {
+    font-family:Monospace;
+    font-size: 5rem;
+    font-weight: 700;
+    visibility:hidden;
 }
 
 .keyboard-container {
