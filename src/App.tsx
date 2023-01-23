@@ -21,6 +21,8 @@ const App = () => {
     }
 
     const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
+    const correctLetters = guessedLetters.filter(letter => wordToGuess.includes(letter))
+
     const winGame = wordToGuess.split('').every(letter => guessedLetters.includes(letter))
     console.log({wordToGuess,guessedLetters})
 
@@ -41,7 +43,11 @@ const App = () => {
                 wordToGuess={wordToGuess}
                 guessedLetters={guessedLetters}
             />
-            <Keyboard addGuessedLetter={addGuessedLetter}/>
+            <Keyboard 
+                addGuessedLetter={addGuessedLetter}
+                incorrectLetters={incorrectLetters}
+                correctLetters={correctLetters}
+            />
         </div>
     )
 }

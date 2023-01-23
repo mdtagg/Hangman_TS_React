@@ -1,5 +1,4 @@
-
-import React from "react"
+import styles from './Keyboard.modules.css'
 
 type HangmanWordProps = {
     wordToGuess:string
@@ -12,10 +11,10 @@ const HangmanWord = ({wordToGuess,guessedLetters}:HangmanWordProps) => {
         <div className='word-container'>
             {wordToGuess.split('').map(letter => (
                 <span className='underline'>
-                    <span 
-                    className='letter'
+                    <span className='letter'
                     style={{ 
-                        visibility: guessedLetters.includes(letter) ? 'visible' : 'hidden'
+                        visibility: guessedLetters.includes(letter) ? 'visible' : 'hidden',
+                        
                      }}
                     >
                         {letter}
