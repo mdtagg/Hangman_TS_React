@@ -1,10 +1,22 @@
 
 import React from "react"
 
-const HangmanWord = () => {
+type HangmanWordProps = {
+    wordToGuess:string
+}
+
+const HangmanWord = ({wordToGuess}:HangmanWordProps) => {
     return (
         <div className='word-container'>
-            test
+            {wordToGuess.split('').map(letter => (
+                <span className='underline'>
+                    <span className='letter'>
+                        {letter}
+                    </span>
+                </span>
+                
+                
+            ))}
         </div>
     )
 }
