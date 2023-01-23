@@ -1,69 +1,93 @@
 import React from 'react'
 
 const HEAD = <div style={{
-            width:'50px',
-            height:'50px',
-            backgroundColor:'black',
+            width:'60px',
+            height:'60px',
             borderRadius:'100%',
-            position:'relative',
-            left:'335px',
-            top:'65px'
+            border:'10px solid black',
+            position:'absolute',
+            top:'75px',
+            left:'160px'
         }}></div>
 
 const BODY = <div style={{
-            width:'25px',
+            width:'20px',
             height:'100px',
             backgroundColor:'black',
-            position:'relative',
-            left:'347px',
-            top:'60px'
+            position:'absolute',
+            top:'130px',
+            left:'180px'
 }}></div>
 
-const LEFT_LEG = <div style={{
-    width:'25px',
+const LEFT_ARM = <div style={{
+    width:'20px',
     height:'70px',
     backgroundColor:'black',
-    position:'relative',
-    left:'320px',
-    top:'50px',
-    rotate:'45deg'
+    rotate:'315deg',
+    position:'absolute',
+    left:'160px',
+    top:'125px'
+}}>
+
+</div>
+
+const RIGHT_ARM = <div style={{
+    width:'20px',
+    height:'70px',
+    backgroundColor:'black',
+    position:'absolute',
+    left:'200px',
+    rotate:'45deg',
+    top:'125px'
+}}>
+
+</div>
+
+const LEFT_LEG = <div style={{
+    width:'20px',
+    height:'70px',
+    backgroundColor:'black',
+    position:'absolute',
+    left:'160px',
+    top:'210px',
+    rotate:'225deg'
 }}></div>
 
 const RIGHT_LEG = <div style={{
-    width:'25px',
+    width:'20px',
     height:'70px',
     backgroundColor:'black',
-    position:'relative',
-    left:'370px',
-    bottom:'25px',
-    rotate:'135deg'
+    position:'absolute',
+    rotate:'135deg',
+    left:'200px',
+    top:'210px'   
 }}></div>
 
-const BODY_PARTS = [HEAD,BODY,LEFT_LEG,RIGHT_LEG]
+const BODY_PARTS = [HEAD,BODY,LEFT_ARM,RIGHT_ARM,LEFT_LEG,RIGHT_LEG]
 
 const HangmanGallows = () => {
     return (
         <div className='gallows-container'>
             <div>
-            {BODY_PARTS.slice(0)}
+            {BODY_PARTS.slice(0,6)}
             </div>
             <div style={{
                 height:'20px',
-                width:'150px',
+                width:'200px',
                 backgroundColor:'black',
                 top:'20px',
-                left:'170px',
-                position:'relative'
+                // marginLeft:'180px',
+                position:'absolute'
             }}
             >
             </div>
             <div style={{
-                height:'30px',
+                height:'40px',
                 width:'20px',
                 backgroundColor:'black',
-                position:'relative',
+                position:'absolute',
                 top:'40px',
-                left:'150px'
+                left:'180px'
             }}>
             </div>
             <div style={{
@@ -71,16 +95,16 @@ const HangmanGallows = () => {
                 width:'20px',
                 backgroundColor:'black',
                 top:'40px',
-                position:'relative'
+                position:'absolute'
             }}>
             </div>
             <div style={{
                 height:'20px',
                 width:'200px',
                 backgroundColor:'black',
-                position:'relative',
+                position:'absolute',
                 top:'340px',
-                right:'110px'
+                right:'-110px'
             }}>
 
             </div>

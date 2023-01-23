@@ -15,8 +15,8 @@ body {
 
 .gallows-container {
     height:50%;
-    display:flex;
-    justify-content: center;
+    margin:auto;
+    position:relative;
 }
 
 .word-container {
