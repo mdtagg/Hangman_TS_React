@@ -1,0 +1,23 @@
+.btn {
+    background-color:rgb(255,255,255);
+    font-weight: 700;
+    cursor: pointer;
+    font-size:1.5rem;
+    border:2px solid black;
+}
+
+.incorrect {
+    background-color: red;
+    color:white;
+    cursor:not-allowed;
+}
+
+.correct {
+    background-color:blue;
+    color:white;
+    cursor:default;
+}
+
+.btn:hover:not(:disabled) {
+    background-color:aqua;
+}
