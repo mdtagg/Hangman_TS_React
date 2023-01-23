@@ -1,4 +1,3 @@
-import React from 'react'
 
 const HEAD = <div style={{
             width:'60px',
@@ -65,18 +64,21 @@ const RIGHT_LEG = <div style={{
 
 const BODY_PARTS = [HEAD,BODY,LEFT_ARM,RIGHT_ARM,LEFT_LEG,RIGHT_LEG]
 
-const HangmanGallows = () => {
+type HangmanGallowsProps = {
+    numberOfGuesses:number
+}
+
+const HangmanGallows = ({numberOfGuesses}:HangmanGallowsProps) => {
     return (
         <div className='gallows-container'>
-            <div>
-            {/* {BODY_PARTS.slice(0,6)} */}
+            <div style={{ position:'relative' }}>
+            {BODY_PARTS.slice(0,numberOfGuesses)}
             </div>
             <div style={{
                 height:'20px',
                 width:'200px',
                 backgroundColor:'black',
                 top:'20px',
-                // marginLeft:'180px',
                 position:'absolute'
             }}
             >
