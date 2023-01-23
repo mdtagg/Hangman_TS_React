@@ -69,7 +69,7 @@ const HangmanGallows = () => {
     return (
         <div className='gallows-container'>
             <div>
-            {BODY_PARTS.slice(0,6)}
+            {/* {BODY_PARTS.slice(0,6)} */}
             </div>
             <div style={{
                 height:'20px',
