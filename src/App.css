@@ -27,18 +27,19 @@ body {
 .keyboard-container {
     height:30%;
     display:grid;
-    grid-template-columns: repeat(13, 1fr);
+    grid-template-columns: repeat(13, 60px);
     grid-template-rows: 1fr 1fr;
     padding:50px;
     gap:10px;
+    justify-content: center;
 }
 
 .letter-btn {
-    background-color:rgb(69, 69, 250);
-    color:white;
+    background-color:rgb(255,255,255);
+    font-weight: 700;
     cursor: pointer;
     font-size:1.5rem;
-    border:none;
+    border:2px solid black;
 }
 
 .letter-btn:hover {
