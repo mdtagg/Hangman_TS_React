@@ -59,14 +59,4 @@ body {
     justify-content: center;
 }
 
-.letter-btn {
-    background-color:rgb(255,255,255);
-    font-weight: 700;
-    cursor: pointer;
-    font-size:1.5rem;
-    border:2px solid black;
-}
 
-.letter-btn:hover {
-    background-color: rgba(132, 132, 132, 0.5)
-}

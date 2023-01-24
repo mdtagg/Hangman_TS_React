@@ -1,4 +1,4 @@
-import { useState,useCallback } from "react";
+import { useState,useCallback,useEffect } from "react";
 import HangmanGallows from './HangmanGallows'
 import HangmanWord from './HangmanWord'
 import Keyboard from './Keyboard'
@@ -24,7 +24,8 @@ const App = () => {
     const correctLetters = guessedLetters.filter(letter => wordToGuess.includes(letter))
 
     const winGame = wordToGuess.split('').every(letter => guessedLetters.includes(letter))
-    console.log({wordToGuess,guessedLetters})
+
+    const reveal = incorrectLetters.length === 6
 
     return (
         <div className='hangman-container'>
@@ -36,14 +37,16 @@ const App = () => {
                     'hidden'
                 }}
             >
-                {incorrectLetters.length === 6 ? 'You Lose, Try Again?': 'You Win!, Another Round?' }
+                {incorrectLetters.length === 6 ? 'You Lose, Press Refresh To Try Again': 'You Win! Press Refresh To Try Again'  }
             </div>
             <HangmanGallows numberOfGuesses={incorrectLetters.length}/>
             <HangmanWord 
+                reveal={reveal}
                 wordToGuess={wordToGuess}
                 guessedLetters={guessedLetters}
             />
             <Keyboard 
+                reveal={reveal}
                 addGuessedLetter={addGuessedLetter}
                 incorrectLetters={incorrectLetters}
                 correctLetters={correctLetters}

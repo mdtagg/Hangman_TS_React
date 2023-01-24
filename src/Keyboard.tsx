@@ -5,11 +5,12 @@ type KeyboardProps = {
     addGuessedLetter: (letter:string) => void
     incorrectLetters: string[]
     correctLetters:string[]
+    reveal:boolean
 }
 
-const Keyboard = ({addGuessedLetter,incorrectLetters,correctLetters}:KeyboardProps) => {
+const Keyboard = ({addGuessedLetter,incorrectLetters,correctLetters,reveal}:KeyboardProps) => {
     const letters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('')
-    // console.log({wordToGuess,incorrectLetters})
+    
     return (
         <div className='keyboard-container'>
             {letters.map((letter,index) => {
@@ -19,15 +20,13 @@ const Keyboard = ({addGuessedLetter,incorrectLetters,correctLetters}:KeyboardPro
                     <button 
                         key={index} 
                         value={letter} 
-                        disabled={incorrect || correct}
+                        disabled={incorrect || correct || reveal}
                         className={
-                        `${styles.btn}
-                        ${incorrect ? styles.incorrect : ''}
-                        ${correct ? styles.correct : ''}
-                        `
+                            `${styles.btn}
+                            ${incorrect ? styles.incorrect : ''}
+                            ${correct ? styles.correct : ''}`
                         }
-                        onClick={() => addGuessedLetter(letter)
-                    }
+                        onClick={() => addGuessedLetter(letter)}
                     >
                         {letter}
                     </button>
