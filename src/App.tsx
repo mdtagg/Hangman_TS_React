@@ -13,7 +13,7 @@ const App = () => {
 
     const [ wordToGuess, setWordToGuess ] = useState(getWord)
     const [ guessedLetters,setGuessedLetters ] = useState<string[]>([])
-    // console.log(wordToGuess)
+    console.log(wordToGuess)
 
     const addGuessedLetter = (letter:string) => {
         if(guessedLetters.includes(letter)) return
@@ -22,9 +22,7 @@ const App = () => {
 
     const incorrectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
     const correctLetters = guessedLetters.filter(letter => wordToGuess.includes(letter))
-
     const winGame = wordToGuess.split('').every(letter => guessedLetters.includes(letter))
-
     const reveal = incorrectLetters.length === 6
 
     return (
@@ -37,7 +35,7 @@ const App = () => {
                     'hidden'
                 }}
             >
-                {incorrectLetters.length === 6 ? 'You Lose, Press Refresh To Try Again': 'You Win! Press Refresh To Try Again'  }
+                {reveal ? 'You Lose, Press Refresh To Try Again': 'You Win! Press Refresh To Try Again'  }
             </div>
             <HangmanGallows numberOfGuesses={incorrectLetters.length}/>
             <HangmanWord 
